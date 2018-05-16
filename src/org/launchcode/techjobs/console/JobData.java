@@ -133,7 +133,10 @@ public class JobData {
 
         for (HashMap<String, String> item : allJobs) {
             for (String aString : item.values()) {
-                if (aString.contains(searchTerm)) {
+                String look = aString.toUpperCase();
+                String findBy = searchTerm.toUpperCase();
+                if (look.contains(findBy)) {
+                //if (aString.contains(searchTerm)) {
                     if (!jobs.contains(item)) {
                         jobs.add(item);
 
